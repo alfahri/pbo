@@ -137,6 +137,9 @@ public class MainActivity extends javax.swing.JFrame {
             if (rs.next()) {
                 if (userId.getText().equals(rs.getString("userId")) && passwordField.getText().equals(rs.getString("password"))) {
                     JOptionPane.showMessageDialog(this, "Berhasil Login");
+                    this.setVisible(false);
+                    dashboarddesign next = new dashboarddesign();
+                    next.setVisible(true);
                 } else {
                     JOptionPane.showMessageDialog(this, "User ID atau Password salah");
                 }
